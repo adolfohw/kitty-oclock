@@ -52,6 +52,7 @@
 			}
 			img {
 				animation-name: waaa;
+				cursor: pointer;
 				max-height: calc(80vh - 104pt);
 				max-height: calc(80dvh - 104pt);
 				max-width: 100vw;
@@ -87,7 +88,7 @@
 		</style>
 	</head>
 	<body>
-		<img src="kitty.svg" alt="A cool vaporwavy kitty" />
+		<img id="kitty" src="kitty.svg" alt="A cool vaporwavy kitty" />
 		<p>It is currently</p>
 		<time id="clock">It's kitty o'clock!</time>
 		<script>
@@ -104,6 +105,14 @@
 				setColorAndTime()
 				setInterval(setColorAndTime, 1000)
 			}, 1000 - new Date().getMilliseconds())
+			const _ = speechSynthesis.getVoices() // Prevent null on the event bellow
+			document.getElementById('kitty').addEventListener('click', () => {
+				if (speechSynthesis.speaking) return
+				const voices = speechSynthesis.getVoices().filter((voice) => voice.lang == 'en-US')
+				const meow = new SpeechSynthesisUtterance('meow')
+				meow.voice = voices[Math.floor(Math.random() * voices.length)]
+				speechSynthesis.speak(meow)
+			})
 		</script>
 	</body>
 </html>
