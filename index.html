@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="It's kitty o'clock!" />
 		<title>meow</title>
 		<style>
 			* {
@@ -58,11 +59,29 @@
 				font-size: 52pt;
 				font-weight: bold;
 				text-align: center;
+				text-shadow: 4px 0px magenta, -4px 0px cyan;
+			}
+			p {
+				border-width: 0;
+				clip: rect(0, 0, 0, 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				white-space: nowrap;
+				width: 1px;
+			}
+			@media (prefers-reduced-motion) {
+				* {
+					animation: none !important;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<img src="kitty.svg" alt="A cool vaporwavy kitty" />
+		<p>It is currently</p>
 		<time id="clock">It's kitty o'clock!</time>
 		<script>
 			const htmlStyle = document.documentElement.style
