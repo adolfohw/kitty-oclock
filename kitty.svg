@@ -13,7 +13,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
-   sodipodi:docname="kitty.svg">
+   sodipodi:docname="kitty.svg"
+   inkscape:export-filename="/Users/Adolfo/dev/adolfohw.dev/kitty.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -27,13 +30,13 @@
      inkscape:cx="437.77899"
      inkscape:cy="422.7529"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="g1083"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-global="true"
      inkscape:window-width="1223"
      inkscape:window-height="776"
-     inkscape:window-x="217"
+     inkscape:window-x="129"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:lockguides="false"
